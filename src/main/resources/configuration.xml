@@ -36,7 +36,7 @@
 
     <!-- 映射文件，mybatis精髓， 后面才会细讲 -->
     <mappers>
-        <mapper resource="com/dy/dao/userDao-mapping.xml"/>
+        <mapper resource="userDao-mapping.xml"/>
     </mappers>
 
 </configuration>
