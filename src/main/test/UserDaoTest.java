@@ -21,8 +21,22 @@ public class UserDaoTest {
     public void findUserById() {
         SqlSession sqlSession = getSessionFactory().openSession();
         UserDao userMapper = sqlSession.getMapper(UserDao.class);
-        User user = userMapper.findUserById(2);
+        User user = userMapper.findUserById(1);
         Assert.assertNull("没找到数据", user);
+    }
+
+    @Test
+    public void insert() {
+        SqlSession sqlSession = getSessionFactory().openSession();
+        UserDao userMapper = sqlSession.getMapper(UserDao.class);
+        User user = new User();
+        user.setId(3);
+        user.setName("dzc");
+        user.setAge(22);
+        user.setDeleteFlag(0);
+        user.setPassword("123456");
+        userMapper.insert(user);
+        sqlSession.commit();
     }
 
     //Mybatis 通过SqlSessionFactory获取SqlSession, 然后才能通过SqlSession与数据库进行交互
