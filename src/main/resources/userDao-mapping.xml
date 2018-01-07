@@ -12,3 +12,4 @@
         values(#{id}, #{name}, #{password}, #{age}, #{deleteFlag})
     </insert>
 </mapper>
+

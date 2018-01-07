@@ -37,6 +37,7 @@
     <!-- 映射文件，mybatis精髓， 后面才会细讲 -->
     <mappers>
         <mapper resource="userDao-mapping.xml"/>
+        <mapper resource="studentDao-mapping.xml"/>
     </mappers>
 
 </configuration>
