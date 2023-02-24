@@ -15,12 +15,13 @@ public class StudentDaoTest {
     public void testFind() {
         SqlSessionFactory factory = getSqlSessionFactory();
         SqlSession session = factory.openSession();
-        StudentDao studentDao=session.getMapper(StudentDao.class);
-        Student stu = studentDao.findStudentById(20140101);
-        for (Course c:
-             stu.getCourseList()) {
-            System.out.println(c.getName());
-        }
+//        StudentDao studentDao=session.getMapper(StudentDao.class);
+//        Student stu = studentDao.findStudentById(20140101);
+//        for (Course c:
+//             stu.getCourseList()) {
+//            System.out.println(c.getName());
+//        }
+
     }
 
 
